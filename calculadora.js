@@ -52,7 +52,8 @@ const calculadora = (valor) => {
             }
 
         }else{
-            console.log('Expresión mal formada')
+            input.value = 'Expresión mal formada'
+            return
         }
         
         op2 = op2.replaceAll(')(', ')*(')
@@ -72,5 +73,6 @@ const calculadora = (valor) => {
         op = ''
         numero = ''
     }
+    input.scrollLeft = input.scrollWidth;
 }
 
